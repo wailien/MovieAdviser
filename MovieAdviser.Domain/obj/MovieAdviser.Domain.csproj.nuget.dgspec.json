@@ -1,0 +1,58 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\wailien\\RiderProjects\\MovieAdviser\\MovieAdviser.Domain\\MovieAdviser.Domain.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\wailien\\RiderProjects\\MovieAdviser\\MovieAdviser.Domain\\MovieAdviser.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\wailien\\RiderProjects\\MovieAdviser\\MovieAdviser.Domain\\MovieAdviser.Domain.csproj",
+        "projectName": "MovieAdviser.Domain",
+        "projectPath": "C:\\Users\\wailien\\RiderProjects\\MovieAdviser\\MovieAdviser.Domain\\MovieAdviser.Domain.csproj",
+        "packagesPath": "C:\\Users\\wailien\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\wailien\\RiderProjects\\MovieAdviser\\MovieAdviser.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\wailien\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Users\\wailien\\.dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

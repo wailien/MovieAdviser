@@ -1,0 +1,66 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "C:\\Users\\wailien\\RiderProjects\\MovieAdviser\\MovieAdviser.WebAPI\\MovieAdviser.WebAPI.csproj",
+    "projectName": "MovieAdviser.WebAPI",
+    "projectPath": "C:\\Users\\wailien\\RiderProjects\\MovieAdviser\\MovieAdviser.WebAPI\\MovieAdviser.WebAPI.csproj",
+    "outputPath": "C:\\Users\\wailien\\RiderProjects\\MovieAdviser\\MovieAdviser.WebAPI\\obj\\",
+    "projectStyle": "PackageReference",
+    "originalTargetFrameworks": [
+      "netcoreapp3.1"
+    ],
+    "sources": {
+      "https://api.nuget.org/v3/index.json": {}
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "projectReferences": {
+          "C:\\Users\\wailien\\RiderProjects\\MovieAdviser\\MovieAdviser.BusinessLogic\\MovieAdviser.BusinessLogic.csproj": {
+            "projectPath": "C:\\Users\\wailien\\RiderProjects\\MovieAdviser\\MovieAdviser.BusinessLogic\\MovieAdviser.BusinessLogic.csproj"
+          },
+          "C:\\Users\\wailien\\RiderProjects\\MovieAdviser\\MovieAdviser.Client\\MovieAdviser.Client.csproj": {
+            "projectPath": "C:\\Users\\wailien\\RiderProjects\\MovieAdviser\\MovieAdviser.Client\\MovieAdviser.Client.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp3.1": {
+      "dependencies": {
+        "AutoMapper": {
+          "target": "Package",
+          "version": "[9.0.0, )"
+        },
+        "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+          "target": "Package",
+          "version": "[7.0.0, )"
+        }
+      },
+      "imports": [
+        "net461",
+        "net462",
+        "net47",
+        "net471",
+        "net472",
+        "net48"
+      ],
+      "assetTargetFallback": true,
+      "warn": true,
+      "frameworkReferences": {
+        "Microsoft.AspNetCore.App": {
+          "privateAssets": "none"
+        },
+        "Microsoft.NETCore.App": {
+          "privateAssets": "all"
+        }
+      },
+      "runtimeIdentifierGraphPath": "C:\\Users\\wailien\\.dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+    }
+  }
+}
