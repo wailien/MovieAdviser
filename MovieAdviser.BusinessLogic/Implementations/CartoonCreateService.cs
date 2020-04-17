@@ -8,16 +8,21 @@ namespace MovieAdviser.BusinessLogic.Implementations
 {
     public class CartoonCreateService : ICartoonCreateService
     {
-        public Task<Cartoon> CreateAsync(CartoonUpdateModel cartoonUpdateModel)
+        public async Task<Cartoon> CreateAsync(CartoonUpdateModel cartoonUpdateModel)
         {
-            return CartoonDataAccess.InsertAsync(cartoonUpdateModel);
+            await GenreGetService.ValidateAsync(cartoonUpdateModel);
+            
+            return await CartoonDataAccess.InsertAsync(cartoonUpdateModel);
         }
         
         private ICartoonDataAccess CartoonDataAccess { get; }
+        
+        private IGenreGetService GenreGetService { get; }
 
-        public CartoonCreateService(ICartoonDataAccess iCartoonDataAccess)
+        public CartoonCreateService(ICartoonDataAccess iCartoonDataAccess, IGenreGetService iGenreGetService)
         {
             CartoonDataAccess = iCartoonDataAccess;
+            GenreGetService = iGenreGetService;
         }
     }
 }

@@ -8,16 +8,21 @@ namespace MovieAdviser.BusinessLogic.Implementations
 {
     public class MovieCreateService : IMovieCreateService
     {
-        public Task<Movie> CreateAsync(MovieUpdateModel movieUpdateModel)
+        public async Task<Movie> CreateAsync(MovieUpdateModel movieUpdateModel)
         {
-            return MovieDataAccess.InsertAsync(movieUpdateModel);
+            await GenreGetService.ValidateAsync(movieUpdateModel);
+            
+            return await MovieDataAccess.InsertAsync(movieUpdateModel);
         }
         
         private IMovieDataAccess MovieDataAccess { get; }
+        
+        private IGenreGetService GenreGetService { get; }
 
-        public MovieCreateService(IMovieDataAccess iMovieDataAccess)
+        public MovieCreateService(IMovieDataAccess iMovieDataAccess, IGenreGetService iGenreGetService)
         {
             MovieDataAccess = iMovieDataAccess;
+            GenreGetService = iGenreGetService;
         }
     }
 }

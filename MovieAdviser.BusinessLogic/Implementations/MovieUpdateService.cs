@@ -8,16 +8,21 @@ namespace MovieAdviser.BusinessLogic.Implementations
 {
     public class MovieUpdateService : IMovieUpdateService
     {
-        public Task<Movie> UpdateAsync(MovieUpdateModel movieUpdateModel)
+        public async Task<Movie> UpdateAsync(MovieUpdateModel movieUpdateModel)
         {
-            return MovieDataAccess.UpdateAsync(movieUpdateModel);
+            await GenreGetService.ValidateAsync(movieUpdateModel);
+            
+            return await MovieDataAccess.UpdateAsync(movieUpdateModel);
         }
         
         private IMovieDataAccess MovieDataAccess { get; }
+        
+        private IGenreGetService GenreGetService { get; }
 
-        public MovieUpdateService(IMovieDataAccess movieDataAccess)
+        public MovieUpdateService(IMovieDataAccess movieDataAccess, IGenreGetService iGenreGetService)
         {
             MovieDataAccess = movieDataAccess;
+            GenreGetService = iGenreGetService;
         }
     }
 }
