@@ -38,9 +38,9 @@ namespace MovieAdviser.DataAccess.Context
                 entity.Property(m => m.Year).IsRequired();
                 entity.Property((m => m.Director)).IsRequired();
                 entity.Property((m => m.Rating)).IsRequired();
-                entity.HasOne(s => s.Genre)
+                entity.HasOne(m => m.Genre)
                     .WithMany(g => g.Movie)
-                    .HasForeignKey(s => s.GenreId)
+                    .HasForeignKey(m => m.GenreId)
                     .HasConstraintName("FK_Movie_Genre");
             });
             
@@ -49,9 +49,9 @@ namespace MovieAdviser.DataAccess.Context
                 entity.Property(c => c.Id).UseIdentityColumn().Metadata.SetBeforeSaveBehavior(PropertySaveBehavior.Ignore);
                 entity.Property(c => c.Name).IsRequired();
                 entity.Property(c => c.Year).IsRequired();
-                entity.HasOne(s => s.Genre)
+                entity.HasOne(c => c.Genre)
                     .WithMany(g => g.Cartoon)
-                    .HasForeignKey(s => s.GenreId)
+                    .HasForeignKey(c => c.GenreId)
                     .HasConstraintName("FK_Cartoon_Genre");
             });
 
