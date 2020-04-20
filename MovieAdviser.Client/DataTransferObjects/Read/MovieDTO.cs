@@ -1,4 +1,4 @@
-﻿namespace MovieAdviser.Client.DataTransferObjects.Read
+﻿﻿namespace MovieAdviser.Client.DataTransferObjects.Read
 {
     public class MovieDTO
     {
