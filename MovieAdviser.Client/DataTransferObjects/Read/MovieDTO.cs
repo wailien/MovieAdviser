@@ -12,6 +12,6 @@
         
         public int Rating { get; set; }
         
-        public GenreDTO GenreDto { get; set; }
+        public GenreDTO Genre { get; set; }
     }
 }
